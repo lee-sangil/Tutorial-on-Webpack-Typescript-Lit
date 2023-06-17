@@ -3,7 +3,8 @@ import {customElement, property} from 'lit/decorators.js';
 
 @customElement('simple-greeting')
 export class SimpleGreeting extends LitElement {
-  static styles = css`p { color: blue } h4 { color: green }`;
+  @property()
+  color = 'red'
 
   @property()
   name = 'Somebody';
@@ -12,6 +13,13 @@ export class SimpleGreeting extends LitElement {
   age = 10;
 
   render() {
-    return html`<p>Hello, ${this.name}!</p><h4>You are ${this.age} years old.</h4>`;
+    return html`
+      <style>
+        p { color: ${this.color} } 
+        h4 { color: green }
+      </style>
+      <p>Hello, ${this.name}!</p>
+      <h4>You are ${this.age} years old.</h4>
+    `;
   }
 }
