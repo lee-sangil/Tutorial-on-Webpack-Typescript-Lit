@@ -1,9 +1,14 @@
 ## Tutorial on Typescript, Lit, and Webpack
-To build bundle for production, run:
+### Usage
+1. Install npm packages
 ```
-$ npm run build
+$ npm install
 ```
-To execute live server for development, run:
+2. Execute live server for development
 ```
 $ npm start
+```
+3. Bundle files for production
+```
+$ npm run build
 ```
